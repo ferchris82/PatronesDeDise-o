@@ -9,7 +9,19 @@ public class Jaguar extends Animal {
     private int edad;
     private float peso;
 
-    //Constructor es el primer método que se ejecuta cuando se crea una instancia
+    //Constructor sin parámetros aplicando sobrecarga de constructores
+    public Jaguar() {
+    }
+
+    public Jaguar(int edad) {
+        this.edad = edad;
+    }
+
+    public Jaguar(float peso) {
+        this.peso = peso;
+    }
+
+    //Constructor con parámetros es el primer método que se ejecuta cuando se crea una instancia
     public Jaguar(int edad, float peso) {
         this.setEdad(edad);
         this.setPeso(peso);
@@ -35,7 +47,7 @@ public class Jaguar extends Animal {
     //Método toString 
     @Override
     public String toString() {
-        return "Mi edad es " + edad + "Mi peso es " + peso;
+        return " Mi edad es " + edad + " Mi peso es " + peso;
     }
 
     //Acá estamos aplicando el polimorfismo que es modificar los métodos de la clase padre
