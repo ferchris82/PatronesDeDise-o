@@ -2,7 +2,7 @@ package main;
 
 //Las clases hijas defines como se debe hacer
 
-public class Jaguar extends Animal {
+public class Jaguar extends Animal implements IFelinoSalvaje{
 
     // Atributos de la clase Televisor
 
@@ -54,9 +54,17 @@ public class Jaguar extends Animal {
     public void dormir(){
         System.out.println("El Jaguar duerme!");
     }
-
+    
     public void comer(){
-        System.out.println("El Jaguar come!");
+        System.out.println("El Jaguar come");
+    }
+
+    public void rugir(){
+        System.out.println("El Jaguar ruge");
+    }
+    
+    public void cazar(){
+        System.out.println("El Jaguar cazar!");
     }
     
 }

@@ -4,7 +4,5 @@ package main;
 
 public interface IFelino {
 
-    void maullar();
-    void dormir();
-    void come();
+    void cazar();
 }

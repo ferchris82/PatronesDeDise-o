@@ -1,6 +1,6 @@
 package main;
 
-public class Rectangulo {
+public class Rectangulo implements IFigura{
 
     // Atributos
     private float base;
@@ -37,8 +37,5 @@ public class Rectangulo {
         return this.getBase() * this.getAltura();
     }
 
-    public void imprimir(){
-        System.out.println(this);
-    }
     
 }
