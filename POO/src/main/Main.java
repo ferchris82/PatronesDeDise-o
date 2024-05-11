@@ -4,12 +4,12 @@ public class Main{
     public static void main(String[] args) {
         
         //Instancia es a crear un objeto
-        Oled oled = new Oled("LG", "55", 1000);
+        Jaguar yagua = new Jaguar(10, 120f);
 
-        System.out.println(oled);
+        System.out.println(yagua);
         
-        oled.disponible();
-        oled.TiendaDisponible();
+        yagua.dormir();
+        yagua.comer();
         
 
         
