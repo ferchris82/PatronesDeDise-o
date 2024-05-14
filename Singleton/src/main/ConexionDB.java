@@ -5,12 +5,12 @@ public class ConexionDB {
     private static ConexionDB conexion;
 
     public String host;
-    
+     
     private ConexionDB(){
 
     }
 
-    public static ConexionDB obtenerConexion(){
+    public synchronized static ConexionDB obtenerConexion(){
         if (conexion == null) { //No se ha instanciado
             conexion = new ConexionDB();
         }

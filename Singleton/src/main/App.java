@@ -2,14 +2,25 @@ package main;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
-        ConexionDB conexion = ConexionDB.obtenerConexion();
-        ConexionDB conexion2 = ConexionDB.obtenerConexion();
 
-        conexion.host = "localhost";
-        System.out.println(conexion.host);
+        Thread t1 = new Thread(new Runnable() {
+            
+            public void run(){
+                ConexionDB conexion = ConexionDB.obtenerConexion();
+                System.out.println(conexion.hashCode());
+            }
+        });
 
-        System.out.println(conexion.host);
-        System.out.println(conexion2.host);
+        Thread t2 = new Thread(new Runnable() {
+            
+            public void run(){
+                ConexionDB conexion = ConexionDB.obtenerConexion();
+                System.out.println(conexion.hashCode());
+            }
+        });
+
+        t1.start();
+        t2.start();
+
     }
 }
