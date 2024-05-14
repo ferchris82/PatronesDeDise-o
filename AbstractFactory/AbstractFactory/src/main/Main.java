@@ -13,7 +13,6 @@ public class Main {
         IComputadora qx = samsung.crearComputadora();
         ITablet s3 = samsung.crearTablet();
 
-        System.out.println(mac);
-        System.out.println(qx);
+        
     }
 }
